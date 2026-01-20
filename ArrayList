@@ -1,0 +1,88 @@
+ways to define the ArrayList : 
+
+//good practice
+List<String> test = new ArrayList<>();
+
+ArrayList<String> test = new ArrayList<>();
+ArrayList<String> test = new ArrayList<String>();
+ArrayList<String> test = new ArrayList<>(Arrays.asList("Apple", "Banana", "Orange"));
+
+//using java 8 
+ArrayList<String> list7 = Stream.of("Foo", "Bar", "Baz").collect(Collectors.toCollection(ArrayList::new));
+
+
+WHY ArrayList: 
+- Maintaining Insertion Order
+- Unknown Size
+- Fast Access by Index
+- Adding / removing at the end
+
+
+methods: 
+- basic = add, remove, set, get, clear, size, contains, sort, isEmpty
+- addAll, retainAll, removeAll, containsAll
+- 
+
+
+snipets :
+
+		ArrayList<String> test = new ArrayList<>();
+		test.add("A");
+		test.add("B");
+		test.add("C");
+		test.add("D");
+		
+		System.out.println("printing the list : " + test);
+
+		System.out.println("iterating the list : ");
+		for(int i=0; i<test.size(); i++) {
+		System.out.println(test.get(i));	
+		}
+		
+		test.set(0, "Z");
+		System.out.println("updated list  : " + test);
+		
+		String query = "d";
+		
+		System.out.println("finding a match in the ArrayList : " + query);
+		if(test.contains(query)){
+			System.out.println("match found");
+		}else {
+			System.out.println("no match found");
+		}
+		
+		// adding two arrayLists 
+		ArrayList<String> test2 = new ArrayList<>(Arrays.asList("U", "V", "W", "X"));
+		test.addAll(test2);
+		System.out.println("combined list : " + test);
+		
+		// retaining any element
+		List<String> test3 = new ArrayList<>(Arrays.asList("L", "E", "O", "T", "A"));
+		//test.retainAll(test3);
+		//System.out.println(test);
+		
+		// remove all 
+		//test.removeAll(test);
+		//System.out.println(test);
+		
+		if(test.containsAll(test3)) {
+			System.out.println("match found");
+		}else {
+			System.out.println("no match found ");
+		}
+
+
+o/p:
+
+printing the list : [A, B, C, D]
+iterating the list : 
+A
+B
+C
+D
+updated list  : [Z, B, C, D]
+finding a match in the ArrayList : d
+no match found
+combined list : [Z, B, C, D, U, V, W, X]
+no match found 
+	
