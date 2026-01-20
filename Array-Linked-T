@@ -1,0 +1,37 @@
+WHY ArrayList: 
+- Maintaining Insertion Order
+- Unknown Size
+- Fast Access by Index
+- Adding / removing at the end
+
+
+methods: 
+- basic = add, remove, set, get, clear, size, contains, sort, isEmpty
+- addAll, retainAll, removeAll, containsAll
+
+
+ways to define the ArrayList : 
+
+//good practice
+List<String> test = new ArrayList<>();
+
+ArrayList<String> test = new ArrayList<>();
+ArrayList<String> test = new ArrayList<String>();
+ArrayList<String> test = new ArrayList<>(Arrays.asList("Apple", "Banana", "Orange"));
+
+//using java 8 
+ArrayList<String> list7 = Stream.of("Foo", "Bar", "Baz").collect(Collectors.toCollection(ArrayList::new));
+
+
+*** The LinkedList stores its elements in "containers." The list has a link to the first container and each container has a link to the next container in the list. 
+    To add an element to the list, the element is placed into a new container and that container is linked to one of the other containers in the list.
+    ex: train 
+
+WHY: 
+- frequent insertion / deletion 
+- unpredictable modifications 
+
+
+METHODS:
+- same as ArrayList 
+- addFirst, removeFirst, addLast, removeLast, getFirst, getLast
