@@ -1,3 +1,15 @@
+WHY ArrayList: 
+- Maintaining Insertion Order
+- Unknown Size
+- Fast Access by Index
+- Adding / removing at the end
+
+
+methods: 
+- basic = add, remove, set, get, clear, size, contains, sort, isEmpty
+- addAll, retainAll, removeAll, containsAll
+
+
 ways to define the ArrayList : 
 
 //good practice
@@ -9,19 +21,6 @@ ArrayList<String> test = new ArrayList<>(Arrays.asList("Apple", "Banana", "Orang
 
 //using java 8 
 ArrayList<String> list7 = Stream.of("Foo", "Bar", "Baz").collect(Collectors.toCollection(ArrayList::new));
-
-
-WHY ArrayList: 
-- Maintaining Insertion Order
-- Unknown Size
-- Fast Access by Index
-- Adding / removing at the end
-
-
-methods: 
-- basic = add, remove, set, get, clear, size, contains, sort, isEmpty
-- addAll, retainAll, removeAll, containsAll
-- 
 
 
 snipets :
@@ -85,4 +84,3 @@ finding a match in the ArrayList : d
 no match found
 combined list : [Z, B, C, D, U, V, W, X]
 no match found 
-	
