@@ -1,14 +1,14 @@
-WHY ArrayList: 
+ARRAYLIST:-
+
+WHY:
 - Maintaining Insertion Order
 - Unknown Size
 - Fast Access by Index
 - Adding / removing at the end
 
-
 methods: 
 - basic = add, remove, set, get, clear, size, contains, sort, isEmpty
 - addAll, retainAll, removeAll, containsAll
-
 
 ways to define the ArrayList : 
 
@@ -23,6 +23,8 @@ ArrayList<String> test = new ArrayList<>(Arrays.asList("Apple", "Banana", "Orang
 ArrayList<String> list7 = Stream.of("Foo", "Bar", "Baz").collect(Collectors.toCollection(ArrayList::new));
 
 
+
+LINKEDLIST:-
 *** The LinkedList stores its elements in "containers." The list has a link to the first container and each container has a link to the next container in the list. 
     To add an element to the list, the element is placed into a new container and that container is linked to one of the other containers in the list.
     ex: train 
@@ -35,3 +37,7 @@ WHY:
 METHODS:
 - same as ArrayList 
 - addFirst, removeFirst, addLast, removeLast, getFirst, getLast
+
+Defining LinkedList is same as ArrayList
+
+NOTE : Use array list for storeing / accessing the data whereas Linkedlist for manupilating
